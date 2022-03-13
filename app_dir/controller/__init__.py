@@ -1,11 +1,15 @@
+from ast import arg
 from app_dir import app
-from flask import render_template
+from flask import render_template, request
 
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/contatos")
+
+@app.route("/resultado")
 def contatos():
-    return render_template("contatos.html")
+    search = request.args.get("search")
+    return render_template("resultado.html",search=search)
+    
