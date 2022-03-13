@@ -16,5 +16,19 @@
     <form action="/">
         <button>VOLTE PARA A HOME</button>
     </form>
+
+                    {%  for c in search %}
+
+<h1>{{c}}</h1>
+
+                    {%  endfor  %}
+
+                {%  for c in search %}
+                {%  if c in "aieiou" %}
+
+<h1>{{c}}</h1>
+
+                {%  endif   %}
+                {%  endfor  %}
 </body>
 </html>
